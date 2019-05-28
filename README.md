@@ -10,14 +10,14 @@
 ![project_overview](/selfdriving_final_figure/project_overview.png)
 
 ## How a robot works: 
-perception: how robot sees the world
-decision making: command to determine what the next step would be
-actuation: make a move 
+- Perception: how robot sees the world
+- Decision making: command to determine what the next step would be
+- Actuation: make a move 
 
 ![ROS_overview](/selfdriving_final_figure/ros.png)
 
 ## Node,topics,messages:
-ROS (Robot Operating System) governs the interaction (communication) of each nodes. 
+- ROS (Robot Operating System) governs the interaction (communication) of each nodes. 
 
 ![ROS_Nodes](/selfdriving_final_figure/nodes.png)
 
