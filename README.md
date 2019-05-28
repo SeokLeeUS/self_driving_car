@@ -7,6 +7,11 @@
 
 ## Project overview:
 
+- Writing ROS nodes to implement and integrate the various features of Carla's autonomous driving system. The features include, 
+1. traffic light detection
+2. controls
+3. waypoint following
+
 ![project_overview](/selfdriving_final_figure/project_overview.png)
 
 ## How a robot works: 
@@ -35,5 +40,5 @@ There are quite a bit of predefined messages which represents the prevailing rob
 Visualization message transportation through topic between nodes (similar with [stateflow](https://www.mathworks.com/products/stateflow.html), [structured analysis](https://en.wikipedia.org/wiki/Structured_analysis))
 ![compute_graph](/selfdriving_final_figure/compute_graph.png)
 
-## Scope of project: 
-- Writing ROS nodes to implement and integrate the various features of Carla's autonomous driving system 
+
+
