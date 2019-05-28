@@ -45,17 +45,18 @@ Visualization message transportation through topic between nodes (similar with [
 ## self driving car nodes:
 
 1.**tl_detector** (traffic light detection)
+
 - incoming topics:  
 
 a. /base_waypoints: the complete list of way points which the vehicle will follow      
 
 b. /image_color: color of traffic light(?)    
 
-c.  /current_pose: the vehicle's current location     
+c.  /current_pose: the vehicle's current location   
+
 - outgoing topic:    
 
-a.  /traffic_waypoint: the locations to stop for red traffic light      
-
+a.  /traffic_waypoint: the locations to stop for red traffic light (index of the waypoint for the nearest upcoming red light's stop line)     
 - things to work on:    
 
 a. tl_detector.py: traffic light detection       
@@ -68,7 +69,7 @@ b. tl_classfier.py: classfies traffic light
 
 - incoming topics:  
 
-a.  /base_waypoints: the complete list of way points which the vehicle will follow.   
+a.  /base_waypoints: the complete list of way points which the vehicle will follow. only published once (it makes sense as it won't change all lists throughout driving on the target path) 
 
 b.  /obstacle_waypoint: ?    
 
@@ -78,7 +79,7 @@ d.  /current_pose: the vehicle's current location
 
 - outgoing topic:    
 
-a.  /final_waypoints: the list of waypoints ahead of the car with target velocities  
+a.  /final_waypoints: the list of waypoints (a fixed number of waypo ahead of the car with target velocities  
 
 ![tl_detector](/selfdriving_final_figure/waypoint-updater-ros-graph.png)
 
