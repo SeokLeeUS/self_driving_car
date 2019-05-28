@@ -1,5 +1,5 @@
 # Self Driving Car capstone
-- Udacity self driving nano degree #8
+- Udacity self driving nano degree #9 (final...)
 
 ## References:
 - All figures appeared on this readme.md are from Udacity's self driving car nano degree material unless otherwise specified. 
