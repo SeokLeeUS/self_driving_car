@@ -27,4 +27,4 @@ Subscribe: The recipient receives the information (message), "receiving" is call
 ![ROS_pub_sub](/selfdriving_final_figure/pub_sub_architecture.png)
 Messages: there are quite a bit of predefined messages which represents the prevailing robotic application. For instance, Camera sends out (publish) "image" message. Wheel encoder publishes "rotation" message. 
 ![ROS_message](/selfdriving_final_figure/ROS_message.png)
-
+Compute Graph: visualization message transportation through topic between nodes (similar with [stateflow](https://www.mathworks.com/products/stateflow.html), [structured analysis](https://en.wikipedia.org/wiki/Structured_analysis))
