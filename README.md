@@ -21,7 +21,7 @@
 
 ![ROS_overview](/selfdriving_final_figure/ros.png)
 
-## Node,topics,messages:
+## term definition (Node,topics,messages,package):
 - ROS (Robot Operating System) governs the interaction (communication) of each nodes. 
 
 ![ROS_Nodes](/selfdriving_final_figure/nodes.png)
@@ -39,6 +39,6 @@ There are quite a bit of predefined messages which represents the prevailing rob
 - Compute Graph: 
 Visualization message transportation through topic between nodes (similar with [stateflow](https://www.mathworks.com/products/stateflow.html), [structured analysis](https://en.wikipedia.org/wiki/Structured_analysis))
 ![compute_graph](/selfdriving_final_figure/compute_graph.png)
-
+- Package: according to [ROSwiki](http://wiki.ros.org/ROS/Concepts), an element of ROS which can build and release. It may contains node(s), ROS dependent library, dataset, configuration files or anything else that is usefully organized together. 
 
 
