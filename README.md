@@ -46,11 +46,11 @@ Visualization message transportation through topic between nodes (similar with [
 
 1.**tl_detector** (traffic light detection)
 - incoming topics:
-a. /base_waypoints: the complete list of way points which the vehicle will follow. 
-b. /image_color: color of traffic light(?)
-c. /current_pose: the vehicle's current location 
+a. \ /base_waypoints: the complete list of way points which the vehicle will follow. 
+b. \ /image_color: color of traffic light(?)
+c. \ /current_pose: the vehicle's current location 
 - outgoing topic:
-a. /traffic_waypoint: the locations to stop for red traffic light
+a. \ /traffic_waypoint: the locations to stop for red traffic light
 - things to work on:
 a. tl_detector.py: traffic light detection 
 b. tl_classfier.py: classfies traffic light
@@ -59,23 +59,23 @@ b. tl_classfier.py: classfies traffic light
 
 2. **waypoint_updater** (update target velocity based on traffic light/obstacle data)
 - incoming topics:
-a. /base_waypoints: the complete list of way points which the vehicle will follow. 
-b. /obstacle_waypoint: ?
-c. /traffic_waypoint: topic from tl_detector node
-d. /current_pose: the vehicle's current location 
+a. \ /base_waypoints: the complete list of way points which the vehicle will follow. 
+b. \ /obstacle_waypoint: ?
+c. \ /traffic_waypoint: topic from tl_detector node
+d. \ /current_pose: the vehicle's current location 
 - outgoing topic:
-a. /final_waypoints: the list of waypoints ahead of the car with target velocities
+a. \ /final_waypoints: the list of waypoints ahead of the car with target velocities
 
 ![tl_detector](/selfdriving_final_figure/waypoint-updater-ros-graph.png)
 
 3.**twist_controller** (responsible for control the vehicle)
 -incoming topics:
-a. /current_velocity
-b. /twist_cmd
-c. /vehicle/dbw_enabled
+a. \ /current_velocity
+b. \ /twist_cmd
+c. \ /vehicle/dbw_enabled
 - outgoing topics:
-a. /vehicle/throttle_cmd
-b. /vehicle/steering_cmd
-c. /vehicle/brake_cmd
+a. \ /vehicle/throttle_cmd
+b. \ /vehicle/steering_cmd
+c. \ /vehicle/brake_cmd
 
 ![twist_controller](/selfdriving_final_figure/dbw-node-ros-graph.png)
