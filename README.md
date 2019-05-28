@@ -46,11 +46,14 @@ Visualization message transportation through topic between nodes (similar with [
 
 1.**tl_detector** (traffic light detection)
 - incoming topics:
-a. \ /base_waypoints: the complete list of way points which the vehicle will follow. 
-b. \ /image_color: color of traffic light(?)
-c. \ /current_pose: the vehicle's current location 
+
+a. /base_waypoints: the complete list of way points which the vehicle will follow.  
+
+b. /image_color: color of traffic light(?)  
+
+c.  /current_pose: the vehicle's current location   
 - outgoing topic:
-a. \ /traffic_waypoint: the locations to stop for red traffic light
+a.  /traffic_waypoint: the locations to stop for red traffic light
 - things to work on:
 a. tl_detector.py: traffic light detection 
 b. tl_classfier.py: classfies traffic light
