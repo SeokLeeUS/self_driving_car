@@ -45,18 +45,18 @@ Visualization message transportation through topic between nodes (similar with [
 ## self driving car nodes:
 
 1.**tl_detector** (traffic light detection)
-- incoming topics:
+- incoming topics:  
 
-a. /base_waypoints: the complete list of way points which the vehicle will follow.  
+a. /base_waypoints: the complete list of way points which the vehicle will follow      
 
-b. /image_color: color of traffic light(?)  
+b. /image_color: color of traffic light(?)    
 
-c.  /current_pose: the vehicle's current location   
-- outgoing topic:
-a.  /traffic_waypoint: the locations to stop for red traffic light  
-- things to work on:
-a. tl_detector.py: traffic light detection   
-b. tl_classfier.py: classfies traffic light  
+c.  /current_pose: the vehicle's current location     
+- outgoing topic:  
+a.  /traffic_waypoint: the locations to stop for red traffic light    
+- things to work on:  
+a. tl_detector.py: traffic light detection     
+b. tl_classfier.py: classfies traffic light    
 
 ![tl_detector](/selfdriving_final_figure/tl-detector-ros-graph.png)
 
@@ -71,12 +71,12 @@ a.  /final_waypoints: the list of waypoints ahead of the car with target velocit
 
 ![tl_detector](/selfdriving_final_figure/waypoint-updater-ros-graph.png)
 
-3.**twist_controller** (responsible for control the vehicle)  
--incoming topics:    
-a.  /current_velocity    
-b.  /twist_cmd    
-c.  /vehicle/dbw_enabled    
-- outgoing topics:    
+3.**twist_controller** (responsible for control the vehicle)    
+-incoming topics:      
+a.  /current_velocity      
+b.  /twist_cmd      
+c.  /vehicle/dbw_enabled      
+- outgoing topics:      
 a.  /vehicle/throttle_cmd    
 b.  /vehicle/steering_cmd    
 c.  /vehicle/brake_cmd    
