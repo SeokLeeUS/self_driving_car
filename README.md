@@ -63,22 +63,22 @@ b. tl_classfier.py: classfies traffic light
 2. **waypoint_updater** (update target velocity based on traffic light/obstacle data)
 - incoming topics:  
 a.  /base_waypoints: the complete list of way points which the vehicle will follow.   
-b.  /obstacle_waypoint: ?  
-c.  /traffic_waypoint: topic from tl_detector node  
-d.  /current_pose: the vehicle's current location   
-- outgoing topic:  
+b.  /obstacle_waypoint: ?    
+c.  /traffic_waypoint: topic from tl_detector node    
+d.  /current_pose: the vehicle's current location     
+- outgoing topic:    
 a.  /final_waypoints: the list of waypoints ahead of the car with target velocities  
 
 ![tl_detector](/selfdriving_final_figure/waypoint-updater-ros-graph.png)
 
 3.**twist_controller** (responsible for control the vehicle)  
--incoming topics:  
-a.  /current_velocity  
-b.  /twist_cmd  
-c.  /vehicle/dbw_enabled  
-- outgoing topics:  
-a.  /vehicle/throttle_cmd  
-b.  /vehicle/steering_cmd  
-c.  /vehicle/brake_cmd  
+-incoming topics:    
+a.  /current_velocity    
+b.  /twist_cmd    
+c.  /vehicle/dbw_enabled    
+- outgoing topics:    
+a.  /vehicle/throttle_cmd    
+b.  /vehicle/steering_cmd    
+c.  /vehicle/brake_cmd    
 
 ![twist_controller](/selfdriving_final_figure/dbw-node-ros-graph.png)
