@@ -34,7 +34,7 @@ Visualization message transportation through topic between nodes (similar with [
 
 ## Project overview:
 
-- The scope of project is to write ROS nodes to implement and integrate the various features (packages) of Carla's autonomous driving system. The packages (**package name**) include, 
+- The scope of project is to write ROS nodes to implement and integrate the various features (packages) of Carla's autonomous driving system. The packages (** c++ package name**) include, 
 
 1. traffic light detection (**tl_detector**): transmits the location to stop for red light
 2. way point updater (**waypoint_updater**): update target velocity of each way points based on traffic light and obstacle detection data
