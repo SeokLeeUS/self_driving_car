@@ -44,61 +44,57 @@ Visualization message transportation through topic between nodes (similar with [
 
 ## self driving car nodes:
 
-   1.**tl_detector** (traffic light detection)
+1.**tl_detector** (traffic light detection)
+  - incoming topics:  
+    a. /base_waypoints: the complete list of way points which the vehicle will follow      
+    b. /image_color: color of traffic light(?)    
+    c. /current_pose: the vehicle's current location   
 
-       - incoming topics:  
+  - outgoing topic:    
 
-         a. /base_waypoints: the complete list of way points which the vehicle will follow      
+    a.  /traffic_waypoint: the locations to stop for red traffic light (index of the waypoint for the nearest upcoming red light's stop line)     
+  - things to work on:    
 
-         b. /image_color: color of traffic light(?)    
+    a. tl_detector.py: traffic light detection       
 
-         c. /current_pose: the vehicle's current location   
-
-- outgoing topic:    
-
-a.  /traffic_waypoint: the locations to stop for red traffic light (index of the waypoint for the nearest upcoming red light's stop line)     
-- things to work on:    
-
-a. tl_detector.py: traffic light detection       
-
-b. tl_classfier.py: classfies traffic light      
+    b. tl_classfier.py: classfies traffic light      
 
 ![tl_detector](/selfdriving_final_figure/tl-detector-ros-graph.png)
 
 2. **waypoint_updater** (update target velocity based on traffic light/obstacle data)
 
-- incoming topics:  
+  - incoming topics:  
 
-a.  /base_waypoints: the complete list of way points which the vehicle will follow. only published once (it makes sense as it won't change all lists throughout driving on the target path) 
+    a.  /base_waypoints: the complete list of way points which the vehicle will follow. only published once (it makes sense as it won't change all lists throughout driving on the target path) 
 
-b.  /obstacle_waypoint: ?    
+    b.  /obstacle_waypoint: ?    
 
-c.  /traffic_waypoint: topic from tl_detector node    
+    c.  /traffic_waypoint: topic from tl_detector node    
 
-d.  /current_pose: the vehicle's current location     
+    d.  /current_pose: the vehicle's current location     
 
-- outgoing topic:    
+  - outgoing topic:    
 
-a.  /final_waypoints: the list of waypoints (a fixed number of waypo ahead of the car with target velocities  
+    a.  /final_waypoints: the list of waypoints (a fixed number of waypo ahead of the car with target velocities  
 
 ![tl_detector](/selfdriving_final_figure/waypoint-updater-ros-graph.png)
 
 3.**twist_controller** (responsible for control the vehicle)    
 
--incoming topics:      
+  -incoming topics:      
 
-a.  /current_velocity      
+   a.  /current_velocity      
 
-b.  /twist_cmd      
+   b.  /twist_cmd      
 
-c.  /vehicle/dbw_enabled      
+   c.  /vehicle/dbw_enabled      
 
-- outgoing topics:      
+  - outgoing topics:      
 
-a.  /vehicle/throttle_cmd    
+    a.  /vehicle/throttle_cmd    
 
-b.  /vehicle/steering_cmd    
+    b.  /vehicle/steering_cmd    
 
-c.  /vehicle/brake_cmd    
+    c.  /vehicle/brake_cmd    
 
 ![twist_controller](/selfdriving_final_figure/dbw-node-ros-graph.png)
