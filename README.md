@@ -1,9 +1,9 @@
 # Self Driving Car capstone
-- Udacity self driving nano degree #9 (final...)
+  - Udacity self driving nano degree #9 (final...)
 
 ## References:
-- All figures appeared on this readme.md are from Udacity's self driving car nano degree material unless otherwise specified. 
-- ROS official website: [ros.org](https://www.ros.org/)
+   - All figures appeared on this readme.md are from Udacity's self driving car nano degree material unless otherwise specified. 
+   - ROS official website: [ros.org](https://www.ros.org/)
 
 ## How a robot works: 
 - Perception: how robot sees the world
