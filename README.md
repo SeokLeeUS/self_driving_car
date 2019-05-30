@@ -98,3 +98,15 @@ Visualization message transportation through topic between nodes (similar with [
     c.  /vehicle/brake_cmd    
 
 ![twist_controller](/selfdriving_final_figure/dbw-node-ros-graph.png)
+
+4. **classifier**
+- Frame work:
+  a. step 1 (classification):
+     - obtain annotated dataset (train/test/validation) [dtlt dataset] (https://cloudstore.uni-ulm.de/s/YWzey3qrjq2tcJs)
+     - look for behavioral cloning/traffic sign identifier code for benchmark
+     - try to utilize exising dtlt parsefile  [dtlt parse](https://github.com/julimueller/dtld_parsing)
+     - after classifier model is developed, predict the signal color. 
+  b. step 2 (integration to tl_classifier node):
+     - initialization (adding necessary initialization attribute and calling methods from other nodes) 
+     - embed classification from step 1
+     
