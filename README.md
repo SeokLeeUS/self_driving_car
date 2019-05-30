@@ -61,9 +61,9 @@ Visualization message transportation through topic between nodes (similar with [
 
 ![tl_detector](/selfdriving_final_figure/tl-detector-ros-graph.png)
 
-2. **waypoint_updater** (update target velocity based on traffic light/obstacle data)
+2.**waypoint_updater** (update target velocity based on traffic light/obstacle data)
 
-  - incoming topics:  
+ - incoming topics:  
 
     a.  /base_waypoints: the complete list of way points which the vehicle will follow. only published once (it makes sense as it won't change all lists throughout driving on the target path) 
 
@@ -73,7 +73,7 @@ Visualization message transportation through topic between nodes (similar with [
 
     d.  /current_pose: the vehicle's current location     
 
-  - outgoing topic:    
+ - outgoing topic:    
 
     a.  /final_waypoints: the list of waypoints (a fixed number of waypo ahead of the car with target velocities  
 
@@ -81,7 +81,7 @@ Visualization message transportation through topic between nodes (similar with [
 
 3.**twist_controller** (responsible for control the vehicle)    
 
-  -incoming topics:      
+ -incoming topics:      
 
    a.  /current_velocity      
 
@@ -89,7 +89,7 @@ Visualization message transportation through topic between nodes (similar with [
 
    c.  /vehicle/dbw_enabled      
 
-  - outgoing topics:      
+ - outgoing topics:      
 
     a.  /vehicle/throttle_cmd    
 
