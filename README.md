@@ -36,23 +36,23 @@ Visualization message transportation through topic between nodes (similar with [
 
 - The scope of project is to write ROS nodes to implement and integrate the various features (packages) of Carla's autonomous driving system. The packages (**c++ package name**) include, 
 
-1. traffic light detection (**tl_detector**): transmits the location to stop for red light
-2. way point updater (**waypoint_updater**): update target velocity of each way points based on traffic light and obstacle detection data
-3. vehicle controller (**twist_controller**): controls the steering,throttle,and brakes
+  1. traffic light detection (**tl_detector**): transmits the location to stop for red light
+  2. way point updater (**waypoint_updater**): update target velocity of each way points based on traffic light and obstacle detection data
+  3. vehicle controller (**twist_controller**): controls the steering,throttle,and brakes
 
 ![project_overview](/selfdriving_final_figure/project_overview.png)
 
 ## self driving car nodes:
 
-1.**tl_detector** (traffic light detection)
+   1.**tl_detector** (traffic light detection)
 
-- incoming topics:  
+       - incoming topics:  
 
-a. /base_waypoints: the complete list of way points which the vehicle will follow      
+         a. /base_waypoints: the complete list of way points which the vehicle will follow      
 
-b. /image_color: color of traffic light(?)    
+         b. /image_color: color of traffic light(?)    
 
-c.  /current_pose: the vehicle's current location   
+         c. /current_pose: the vehicle's current location   
 
 - outgoing topic:    
 
