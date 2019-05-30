@@ -81,7 +81,7 @@ Visualization message transportation through topic between nodes (similar with [
 
 3.**twist_controller** (responsible for control the vehicle)    
 
- -incoming topics:      
+ - incoming topics:      
 
    a.  /current_velocity      
 
