@@ -1,3 +1,9 @@
+yellow	1
+red	2
+green	3
+rest	4
+
+
 # Self Driving Car capstone
   - Udacity self driving nano degree #9 (final...)
 
