@@ -102,11 +102,14 @@ Visualization message transportation through topic between nodes (similar with [
 4. **classifier**
 - Frame work:
   a. step 1 (classification):
-     - obtain annotated dataset (train/test/validation) [dtlt dataset] (https://cloudstore.uni-ulm.de/s/YWzey3qrjq2tcJs)
-     - look for behavioral cloning/traffic sign identifier code for benchmark
-     - try to utilize exising dtlt parsefile  [dtlt parse](https://github.com/julimueller/dtld_parsing)
-     - after classifier model is developed, predict the signal color. 
+     - obtain annotated dataset [Bosch dataset] (https://hci.iwr.uni-heidelberg.de/benchmarks)
+     - look for behavioral cloning code for benchmark
+     - create a csv file for data with annotated traffic signal color
+     - train the model and predict the traffic signal for testing by looking at existing code appeared on here
+     [asimonov's CNN for traffic signal identification](https://github.com/asimonov/Bosch-TL-Dataset)
+     - 
   b. step 2 (integration to tl_classifier node):
      - initialization (adding necessary initialization attribute and calling methods from other nodes) 
-     - embed classification from step 1
+     - embed classification and transmit the signal color as an output. 
+     
      
