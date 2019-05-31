@@ -103,9 +103,9 @@ Visualization message transportation through topic between nodes (similar with [
 - Frame work:
   a. step 1 (classification):
      - obtain annotated dataset [Bosch dataset] (https://hci.iwr.uni-heidelberg.de/benchmarks)
-     - look for behavioral cloning code for benchmark
+     - look for behavioral cloning code for benchmark [Behavioral_Cloning](https://github.com/SeokLeeUS/behavioral_cloning)
      - create a csv file for data with annotated traffic signal color
-     - train the model and predict the traffic signal for testing by looking at existing code appeared on here
+     - train the model and predict the traffic signal for testing by looking at existing code appeared on here:
      [asimonov's CNN for traffic signal identification](https://github.com/asimonov/Bosch-TL-Dataset)
      - 
   b. step 2 (integration to tl_classifier node):
