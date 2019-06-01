@@ -1,3 +1,10 @@
+python version for self-driving (python --version)
+2.7.12
+keras version (python -c "import keras; print(keras.__version__):)
+2.0.8
+
+
+
 yellow	1
 red	2
 green	3
