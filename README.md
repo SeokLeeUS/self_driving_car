@@ -13,7 +13,7 @@ Training model files:
 Predict model to check the training model works fine:
 - predict_tl.py
 
-number of training/validation data: 10698 file. 
+number of training/validation data is 10698. The location of data is 
 
 Image reprocessing code (classifier_dataprep_01.ipynb):
 ```python
