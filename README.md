@@ -1,7 +1,35 @@
-python version for self-driving (python --version)
+Python version:
+```python
+python --version
 2.7.12
-keras version (python -c "import keras; print(keras.__version__):)
+```
+Keras version 
+```python
+python -c "import keras; print(keras.__version__)
 2.0.8
+```
+Training model files: 
+- traffic_identifer_training_00.py
+Predict model to check the training model works fine:
+- predict_tl.py
+
+number of training/validation data: 10698 file. 
+
+Image reprocessing code (classifier_dataprep_01.ipynb):
+```python
+# jupyter notebook command 
+import sys
+sys.executable
+import numpy as np
+
+from platform import python_version
+print(python_version())
+
+import numpy
+numpy.version.version
+%run -i save_tl_images.py data/train.yaml data/tl-extract-train
+```
+tl_images.py is take from [this link](https://github.com/asimonov/Bosch-TL-Dataset)
 
 
 
