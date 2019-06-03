@@ -10,12 +10,29 @@ python --version
 python -c "import keras; print(keras.__version__)
 2.0.8
 ```
+
+## Procedure 
+- At first, make sure the vehicle follows the path without classification 
+- image classification model build up 
+  - image collection
+  - train/test/verify
+  - predict
+- external Bosch data set works well with a learning model (taken from behavioral cloning's CNN architecture), but it doesn't predict well with simulation images. 
+- shift the gear to collect the traffic signal images from simulation envrironment 
+  - need to establish the image saving algorithrm from a topic 
+  - need to establish the signal color information form a messaage in order to annotate the image
+  - create a seperate code to save the combination image/annotation in csv format
+  - when training the model, need to find out if I need to crop out the image. Also, I need to consider to set the input/output size as is. (bosch dataset forces to set the image size as 32x32x3).
+  - Also, make sure I may need to have image pre-processing before training/validate/predict(I need to check).  
+- data preprocessing- why there's no data preprocessing for bosch dataset?
+- I also need to check the classification output is transmitted correctly to the tl_detector.py logic when the tl_classifier function is called. 
+
 Training model files: 
 - traffic_identifer_training_00.py
 Predict model to check the training model works fine:
 - predict_tl.py
 
-#umber of training/validation data is 10698. The location of data is 
+Number of training/validation data is 10698. The location of data is xxx
 
 Image reprocessing code (classifier_dataprep_01.ipynb):
 ```python
@@ -48,28 +65,31 @@ a. Take the image from the simulation. The code is,
         print(image_filename)
         cv2.imwrite('{}.jpg'.format(image_filename),image)
 ```
-b. The sample an image every 3 images obtained from the simulation: 
-```python
-
-
-```
-c. Image classification annotation, there's message from a topic which does tell about the signal color, hence, save along with the annotation. 
-```python
-```
-d. I might need cropping the image to only looking at traffic light from the simulation. 
+b. Image classification annotation, there's message from a topic which does tell about the signal color, hence, save along with the annotation. 
 ```python
 from styx_msgs.msg import TrafficLightArray, TrafficLight
-sub7 = rospy.Subscriber('/vehicle/traffic_lights', TrafficLight, self.traffic_light_cb)
-def traffic_light_cb(self, msg):
-        self.light = msg.light # to annotate the state
-print(self.light) # test to check if state transmits
+t=TrafficLight()
+print(t.state)
 ```
-e. Things to know are, 
-- where is the traffic color message from a node/a topic? and code to extract the color information to put it on the image file name.
-- how to change the file name to account for the 
-- data preprocessing- why there's no data preprocessing for bosch dataset?
-- how to create csv file to put the file name on the first column, the color classification on the second column. 
-- 
+c. Add postfix @ the file name to annotate the signal color:
+```python
+image_filename = os.path.join(image_folder,timerstamp,'_',t.state)
+```
+d. drive manually to collect image 
+
+e. generate csv files (1st column: file name, 2nd column, signal color annotation)
+```python
+
+```
+f. I might need cropping the image to only looking at traffic light from the simulation. 
+```python
+
+```
+g. Sample an image every other 3 images obtained from the simulation to mitigate the latency issue on the simulation: 
+```python
+
+```
+
 
 
 yellow	1
