@@ -13,19 +13,19 @@ python -c "import keras; print(keras.__version__)
 
 ## Procedure 
 - At first, make sure the vehicle follows the path without classification 
-- image classification model build up 
-  - image collection
-  - train/test/verify
-  - predict
+- In the next, attempted to build up image classification model. The activities include, 
+  - image collection for training 
+  - conduct train/test/verify by given learning model
+  - test to see if the model predicts correctly 
 - external Bosch data set works well with a learning model (taken from behavioral cloning's CNN architecture), but it doesn't predict well with simulation images. 
 - shift the gear to collect the traffic signal images from simulation envrironment 
-  - need to establish the image saving algorithrm from a topic 
-  - need to establish the signal color information form a messaage in order to annotate the image
+  - need to build the image saving algorithm from a topic  (done)
+  - need to establish code to receive the signal color form the simulation environment in order to annotate the image (done)
   - create a seperate code to save the combination image/annotation in csv format
   - when training the model, need to find out if I need to crop out the image. Also, I need to consider to set the input/output size as is. (bosch dataset forces to set the image size as 32x32x3).
   - Also, make sure I may need to have image pre-processing before training/validate/predict(I need to check).  
-- data preprocessing- why there's no data preprocessing for bosch dataset?
-- I also need to check the classification output is transmitted correctly to the tl_detector.py logic when the tl_classifier function is called. 
+  - data preprocessing- why there's no image prep-rocessing for bosch dataset?
+  - I also need to check the classification output is transmitted correctly to the tl_detector.py logic when the tl_classifier function is called. 
 
 Training model files: 
 - traffic_identifer_training_00.py
