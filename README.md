@@ -1,9 +1,11 @@
-Python version:
+Simulation environment:
+
+-- Python version:
 ```python
 python --version
 2.7.12
 ```
-Keras version 
+-- Keras version 
 ```python
 python -c "import keras; print(keras.__version__)
 2.0.8
@@ -13,7 +15,7 @@ Training model files:
 Predict model to check the training model works fine:
 - predict_tl.py
 
-number of training/validation data is 10698. The location of data is 
+#umber of training/validation data is 10698. The location of data is 
 
 Image reprocessing code (classifier_dataprep_01.ipynb):
 ```python
@@ -31,6 +33,43 @@ numpy.version.version
 ```
 tl_images.py is take from [this link](https://github.com/asimonov/Bosch-TL-Dataset)
 
+However, the classification with traffic light in simulation doesn't work well. 
+
+The options which I am considering is, 
+
+a. Take the image from the simulation. The code is, 
+```python 
+# saving traffic light image from simulation:
+        path = os.getcwd()
+        directory = os.path.dirname(path)
+        image_folder = directory +'/tl_detector/sim_data'
+        timestamp = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f')[:-3]
+        image_filename = os.path.join(image_folder, timestamp)
+        print(image_filename)
+        cv2.imwrite('{}.jpg'.format(image_filename),image)
+```
+b. The sample an image every 3 images obtained from the simulation: 
+```python
+
+
+```
+c. Image classification annotation, there's message from a topic which does tell about the signal color, hence, save along with the annotation. 
+```python
+```
+d. I might need cropping the image to only looking at traffic light from the simulation. 
+```python
+from styx_msgs.msg import TrafficLightArray, TrafficLight
+sub7 = rospy.Subscriber('/vehicle/traffic_lights', TrafficLight, self.traffic_light_cb)
+def traffic_light_cb(self, msg):
+        self.light = msg.light # to annotate the state
+print(self.light) # test to check if state transmits
+```
+e. Things to know are, 
+- where is the traffic color message from a node/a topic? and code to extract the color information to put it on the image file name.
+- how to change the file name to account for the 
+- data preprocessing- why there's no data preprocessing for bosch dataset?
+- how to create csv file to put the file name on the first column, the color classification on the second column. 
+- 
 
 
 yellow	1
