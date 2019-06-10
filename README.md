@@ -236,3 +236,8 @@ Visualization message transportation through topic between nodes (similar with [
      - without camera on, path following works. 
      - at steady state, it detects the red stop signal. 
    
+before classification/detection:
+![original](/selfdriving_final_figure/red_light_detection0.png)
+after classification/detection:
+![opencvdetection](/selfdriving_final_figure/red_light_detection1.png)
+![opencvdetection](/selfdriving_final_figure/red_light_detection2.png)
