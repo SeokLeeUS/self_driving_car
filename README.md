@@ -2,7 +2,7 @@ Simulation environment:
 
 -- Python version:
 ```python
-python --version
+python version
 2.7.12
 ```
 -- Keras version 
