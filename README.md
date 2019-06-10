@@ -217,8 +217,22 @@ Visualization message transportation through topic between nodes (similar with [
      - look for behavioral cloning code for benchmark [Behavioral_Cloning](https://github.com/SeokLeeUS/behavioral_cloning)
      - then train and predict 
      
+     ** revised step1 (image detection using opencv):
+     - The Bosch dataset method doesn't detect the traffic signal image correctly. The difference from the trained image to simulation          image makes wrong classificaiton 
+     - Tried to engage CNN and crop the image at certain range where the vehicle approaches to the nearest traffic signal. However, the 
+       when camera is on, path following is not working so manually driving and collecting data is painful. Therefore, tried to look for        the simplest way.  
+     - I used a method to detect a red circle when the vehicle approaches 80m before the nearest traffic signal 
+     
   b. step 2 (integration to tl_classifier node):
      - initialization (adding necessary initialization attribute and calling methods from other nodes) 
      - embed classification and transmit the signal color as an output. 
      
      
+5. Things to note:
+   - path following doesn't work when camera is on. rospy rate is adjusted @ tl_detector as 5hz, but no luck. 
+   - in order to mitigate the latency issue when camera is on, I had added a method to take only 1 image out of 3 for classification,         but no luck. 
+   - It took so long time to troubleshoot and mitigate the latency. I asked Udacity to look at if simulator has changed at some point.
+   - Until the discussion happens with Udacity, what I can demonstrate for the final submission are, 
+     - without camera on, path following works. 
+     - at steady state, it detects the red stop signal. 
+   
