@@ -1,3 +1,15 @@
+# PLEASE DOWNLOAD ZIP FILE AND UNZIP. 
+
+## Submission note:
+
+   - Path following doesn't work when camera is turned on (without camera on, it works) @ workspace environment, rospy rate has been adjusted @ tl_detector as 5hz, but no luck. 
+   - in order to mitigate the latency issue which influences path following, I had added a method to take only 1 image out of 3 for classification, but no luck. 
+   - It took so long time to troubleshoot and mitigate the latency. 
+   - I had asked Udacity to look at if simulator has changed at some point.
+   - Until the discussion happens with Udacity, what I can demonstrate for the final submission are, 
+     - without camera on, path following works. 
+     - at steady state manual mode in front of the nearest traffic signal, the classifier detects the red stop signal correctly. 
+
 Simulation environment:
 
 -- Python version:
