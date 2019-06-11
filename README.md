@@ -349,3 +349,6 @@ Before classification/detection:
 After classification/detection:
 ![opencvdetection](/selfdriving_final_figure/red_light_detection1.png)
 ![opencvdetection](/selfdriving_final_figure/red_light_detection2.png)
+6. Tips:
+
+[how to find message name on a topic] (https://classroom.udacity.com/nanodegrees/nd013-ent/parts/475eded3-926d-4117-95df-4a2d73df07b6/modules/801fb139-e453-46b0-ae57-36c69edfb717/lessons/8d2ae137-cec6-44c6-9f3c-dacadba2837d/concepts/e1f2a5cf-c697-4880-afb2-b88f3f83d07b)
