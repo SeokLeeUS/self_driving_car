@@ -349,9 +349,14 @@ Before classification/detection:
 After classification/detection:
 ![opencvdetection](/selfdriving_final_figure/red_light_detection1.png)
 ![opencvdetection](/selfdriving_final_figure/red_light_detection2.png)
+
+
 6. Tips:
-   - rostopic list: look up all topics [ros_topic_list](/selfdriving_final_figure/rostopic_list.png)
-   - rostopic info /current_pose: check the mesage type on a "/current_pose" topic [ros_topic_list_info](/selfdriving_final_figure/rostopic_info.png)
-   - rosmsg info geometry_msgs/PoseStamped [ros_msg_list](/selfdriving_final_figure/rostopic_info_msg.png)
+   - rostopic list: look up all topics 
+   ![ros_topic_list](/selfdriving_final_figure/rostopic_list.png)
+   - rostopic info /current_pose: check the mesage type on a "/current_pose" topic 
+   ![ros_topic_list_info](/selfdriving_final_figure/rostopic_info.png)
+   - rosmsg info geometry_msgs/PoseStamped: check the message contents
+   ![ros_msg_list](/selfdriving_final_figure/rostopic_info_msg.png)
    
       
