@@ -359,4 +359,9 @@ After classification/detection:
    - rosmsg info geometry_msgs/PoseStamped: check the message contents
    ![ros_msg_list](/selfdriving_final_figure/rostopic_info_msg.png)
    
-      
+7. Issues:
+   - There's no message coming across from base_waypoint topic. The message type is styx_msgs/Lane. 
+   ![no_ros_msg](/selfdriving_final_figure/rostopic_echo_base_waypoints.png)
+   
+   
+
