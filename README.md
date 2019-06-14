@@ -38,7 +38,7 @@ python -c "import keras; print(keras.__version__)
      -~~save_tl_images.py: image file save (taken from [this link](https://github.com/asimonov/Bosch-TL-Dataset))
      -~~csv_creation.pynb: creating a template which organize file name and classifier
      -~~traffic_identifier_2.py: CNN model to train the data set
-     -~~predict_tl_1.py: testing script to see if it does predict the image well.
+     -~~predict_tl_1.py: testing script to see if it does predict the image well.~~
 
 - ~~External Bosch data set works well with a learning model (taken from behavioral cloning's CNN architecture), but it doesn't predict well with simulation images. 
 
