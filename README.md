@@ -29,22 +29,22 @@ python -c "import keras; print(keras.__version__)
 ## Procedure 
 - At first, make sure the vehicle follows the path without classification (done without camera on)
 - ~~In the next, I attempted to build up image classification model using Convolutional Neural Network (CNN). The activities include,~~
-  - ~~external image collection for training ~~
+  - ~~external image collection for training~~
   - ~~conduct train/test/verify by given learning model (repurposing CNN from behavioral cloning)~~
-  - ~~test to see if the model predicts correctly ~~
-  - ~~then, run simulation while camera on to see if the prediction works under simulation environment. 
-    -~~associated files:
-     -~~classifier_dataprep_01.pynb: image import, resize, and rename the file of Bosch data set 
-     -~~save_tl_images.py: image file save (taken from [this link](https://github.com/asimonov/Bosch-TL-Dataset))
-     -~~csv_creation.pynb: creating a template which organize file name and classifier
-     -~~traffic_identifier_2.py: CNN model to train the data set
+  - ~~test to see if the model predicts correctly~~
+  - ~~then, run simulation while camera on to see if the prediction works under simulation environment.~~ 
+    -~~associated files:~~
+     -~~classifier_dataprep_01.pynb: image import, resize, and rename the file of Bosch data set~~ 
+     -~~save_tl_images.py: image file save (taken from [this link](https://github.com/asimonov/Bosch-TL-Dataset))~~
+     -~~csv_creation.pynb: creating a template which organize file name and classifier~~
+     -~~traffic_identifier_2.py: CNN model to train the data set~~
      -~~predict_tl_1.py: testing script to see if it does predict the image well.~~
 
-- ~~External Bosch data set works well with a learning model (taken from behavioral cloning's CNN architecture), but it doesn't predict well with simulation images. 
+- ~~External Bosch data set works well with a learning model (taken from behavioral cloning's CNN architecture), but it doesn't predict well with simulation images.~~ 
 
-- ~~Changed the classifier architecture to collect the traffic signal images from simulation envrironment for training because I thought the simulation image got other scenary other than traffic signal images. Therefore, I would like to crop the traffic signal only to see if the trained model could predict. To do so, the following steps are taken:
+- ~~Changed the classifier architecture to collect the traffic signal images from simulation envrironment for training because I thought the simulation image got other scenary other than traffic signal images. Therefore, I would like to crop the traffic signal only to see if the trained model could predict. To do so, the following steps are taken:~~
 
-  - ~~need to establish the image saving algorithm from '/image_color' topic  (done)
+  - ~~need to establish the image saving algorithm from '/image_color' topic  (done)~~
   ```python
    def get_light_state(self, light):
         """Determines the current color of the traffic light
@@ -81,11 +81,11 @@ python -c "import keras; print(keras.__version__)
             return 4 #unknown
   
   ``` 
-  - ~~need to establish code to receive the signal color form the simulation environment in order to annotate the image automatically (done, however, I found out later that the traffic light color from '/image_color' topic doesn't match with the simulation light color..)
+  - ~~need to establish code to receive the signal color form the simulation environment in order to annotate the image automatically (done, however, I found out later that the traffic light color from '/image_color' topic doesn't match with the simulation light color..)~~
   ```python
                   image_filename = os.path.join(image_folder, timestamp+'_'+str(light.state))  
   ```
-  - ~~create a seperate code to save the combination image/annotation in csv format (done)
+  - ~~create a seperate code to save the combination image/annotation in csv format (done)~~
   ```python
    import os
    import csv
@@ -114,11 +114,11 @@ python -c "import keras; print(keras.__version__)
   
   ```
   
-  - ~~After the simulation images(without auto-crop) are saved, I tested out an image for prediction. To do so, manully cropped out and resize the image (32x32x3) because Bosch dataset forces to set the image size as 32x32x3. 
-    -~~Training model files: 
-      -~~traffic_identifer_2.py
-    -~~Predict script:
-      -~~predict_tl.py
+  - ~~After the simulation images(without auto-crop) are saved, I tested out an image for prediction. To do so, manully cropped out and resize the image (32x32x3) because Bosch dataset forces to set the image size as 32x32x3.~~ 
+    -~~Training model files:~~ 
+      -~~traffic_identifer_2.py~~
+    -~~Predict script:~~
+      -~~predict_tl.py~~
 
 
 
@@ -318,15 +318,15 @@ Visualization message transportation through topic between nodes (similar with [
 
 ![twist_controller](/selfdriving_final_figure/dbw-node-ros-graph.png)
 
-4. ~~**classifier**
-- ~~Frame work:
-  a. ~~step 1 (classification):
-     -~~obtain annotated dataset [Bosch dataset] (https://hci.iwr.uni-heidelberg.de/benchmarks)
-     - ~~train the model and predict the traffic signal for testing the data by looking at existing example code:
+4. ~~**classifier**~~
+- ~~Frame work:~~
+  a. ~~step 1 (classification):~~
+     -~~obtain annotated dataset [Bosch dataset] (https://hci.iwr.uni-heidelberg.de/benchmarks)~~
+     - ~~train the model and predict the traffic signal for testing the data by looking at existing example code:~~
      [asimonov's CNN for traffic signal identification](https://github.com/asimonov/Bosch-TL-Dataset)
-     - ~~create a csv file for data location with annotated traffic signal color
-     - ~~look for behavioral cloning code for benchmark [Behavioral_Cloning](https://github.com/SeokLeeUS/behavioral_cloning)
-     - ~~then train and predict 
+     - ~~create a csv file for data location with annotated traffic signal color~~
+     - ~~look for behavioral cloning code for benchmark [Behavioral_Cloning]~~(https://github.com/SeokLeeUS/behavioral_cloning)
+     - ~~then train and predict~~ 
      
      ** revised step1 (image detection using opencv) for a intermediate solution:
      - As fore-mentioned, The Bosch dataset method doesn't detect the traffic signal image correctly using CNN. The reason is, the difference from the trained images to captured simulation image makes result in wrong prediction (classificaiton)
@@ -363,7 +363,7 @@ After classification/detection:
    ![ros_msg_list](/selfdriving_final_figure/rostopic_info_msg.png)
    
 7. Issues:
-   - ~~There's no message coming across from base_waypoint topic. The message type is styx_msgs/Lane. 
+   - ~~There's no message coming across from base_waypoint topic. The message type is styx_msgs/Lane.~~ 
    ![no_ros_msg](/selfdriving_final_figure/rostopic_echo_base_waypoints.png)
    
    
