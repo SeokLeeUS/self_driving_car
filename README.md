@@ -7,7 +7,7 @@
    - It took so long time to troubleshoot and mitigate the latency. 
    - I had asked Udacity to look at if the simulator has changed at some point.
    - Until the discussion happens with Udacity, what I can demonstrate for the final submission are, 
-     - without camera on, path following works. 
+     - without camera on, path following works. here is the video ![link](https://youtu.be/YuUtXkjyugA) 
      - at steady state manual mode in front of the nearest traffic signal, the classifier detects the red stop signal correctly. 
 
 Simulation environment:
