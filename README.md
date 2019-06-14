@@ -28,10 +28,10 @@ python -c "import keras; print(keras.__version__)
 
 ## Procedure 
 - At first, make sure the vehicle follows the path without classification (done without camera on)
-- ~~In the next, I attempted to build up image classification model using Convolutional Neural Network (CNN). The activities include, 
-  - ~~external image collection for training 
-  - ~~conduct train/test/verify by given learning model (repurposing CNN from behavioral cloning)
-  - ~~test to see if the model predicts correctly 
+- ~~In the next, I attempted to build up image classification model using Convolutional Neural Network (CNN). The activities include,~~
+  - ~~external image collection for training ~~
+  - ~~conduct train/test/verify by given learning model (repurposing CNN from behavioral cloning)~~
+  - ~~test to see if the model predicts correctly ~~
   - ~~then, run simulation while camera on to see if the prediction works under simulation environment. 
     -~~associated files:
      -~~classifier_dataprep_01.pynb: image import, resize, and rename the file of Bosch data set 
